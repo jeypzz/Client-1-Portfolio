@@ -1,0 +1,8 @@
+.App {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  overscroll-behavior-y: none;
+  transition: background-color 0.5s ease;
+}

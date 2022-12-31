@@ -1,0 +1,179 @@
+.about {
+  overflow: hidden;
+}
+
+.about__container {
+  display: flex;
+  justify-content: center;
+  z-index: 9;
+  position: relative;
+}
+
+.about__img {
+  width: 30vw;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-right: 3rem;
+}
+
+.about__content {
+  width: 30vw;
+
+  p {
+    margin-bottom: var(--mb-2);
+    background-color: var(--body-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    z-index: 9;
+    position: relative;
+  }
+
+  .about__info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: var(--mb-2);
+
+    div {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .about__info-title {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+  }
+
+  .about__info-name {
+    width: 120px;
+    font-size: var(--smaller-font-size);
+  }
+}
+
+.about__buttons {
+  display: flex;
+  justify-content: space-around;
+
+  .about__btn {
+    width: 250px;
+
+    &:hover {
+      svg {
+        transform: rotate(0);
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+/* ============ MEDIA QUERIES ========== */
+
+@media screen and (min-width: 2000px) {
+  .about__img {
+    max-width: 45vw;
+  }
+
+  .about__content {
+    max-width: 30vw;
+  }
+}
+
+@media screen and (min-width: 1601px) {
+  .about__img {
+    width: 35vw;
+  }
+
+  .about__content {
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1151px) and (max-width: 1600px) {
+  .about__img {
+    width: 40vw;
+  }
+
+  .about__content {
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 951px) and (max-width: 1150px) {
+  .about__img {
+    width: 35vw;
+  }
+
+  .about__content {
+    width: 45vw;
+  }
+
+  .about__buttons {
+    .about__btn {
+      width: 210px;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .about__container {
+    flex-direction: column;
+  }
+
+  .about__img,
+  .about__content {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .about__img {
+    margin-bottom: var(--mb-1-5);
+  }
+
+  .about__info-name {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about__buttons {
+    flex-direction: column;
+    align-items: center;
+
+    .about__btn {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+}
+
+@media screen and (max-width: 350px) {
+  .about__content {
+    .about__info {
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 200px;
+      align-items: center;
+
+      div {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+
+      .about__info-name {
+        width: 50px;
+      }
+    }
+  }
+}

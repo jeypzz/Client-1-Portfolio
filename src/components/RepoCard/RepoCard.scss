@@ -1,0 +1,110 @@
+.repo__container {
+  padding: 2rem 2rem;
+  border: 1px solid var(--first-color-lighter);
+  border-radius: 0.5rem;
+  width: 450px;
+  background-color: var(--body-color);
+  z-index: 9;
+  position: relative;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    min-height: 69px;
+    font-size: var(--small-font-size);
+    margin-bottom: 1rem;
+  }
+
+  /* Languages tag */
+  .CSS {
+    background-color: #563d7c;
+    color: var(--first-color-lighter);
+  }
+
+  .JavaScript {
+    color: black;
+    background-color: #f1e05a;
+  }
+
+  .HTML {
+    background-color: #e34c26;
+  }
+
+  .Vue {
+    background-color: #41b883;
+    color: white;
+  }
+
+  .Shell {
+    background-color: #89e051;
+    color: white;
+  }
+
+  .Ruby {
+    background-color: #741f20;
+    color: white;
+  }
+
+  .TypeScript {
+    background-color: #2b7489;
+    color: white;
+  }
+
+  .SCSS {
+    background-color: #c6538c;
+    color: black;
+  }
+}
+
+.repo__language-tag {
+  font-size: var(--small-font-size);
+
+  padding: 0.25rem 1rem;
+  background-color: rgba(117, 117, 117, 0.5);
+  border-radius: 99px;
+}
+
+.repo__buttons {
+  a {
+    color: var(--first-color);
+    transition: 0.2s ease;
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--first-color-alt);
+    }
+  }
+
+  a:first-child {
+    margin-right: 1rem;
+  }
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: var(--first-color-lighter);
+  opacity: 0.4;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 530px) {
+  .repo__container {
+    padding: 1.5rem 2rem;
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .repo__buttons {
+    display: flex;
+    flex-direction: column;
+
+    a:first-child {
+      margin-right: 0;
+      margin-bottom: 0.25rem;
+    }
+  }
+}

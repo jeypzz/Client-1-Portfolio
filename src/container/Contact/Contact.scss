@@ -1,0 +1,149 @@
+.contact__container {
+  margin: 0 2rem;
+}
+
+.contact__info {
+  svg {
+    font-size: 2rem;
+    color: var(--first-color);
+    margin-right: var(--mb-0-75);
+  }
+}
+
+.contact__info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-2);
+}
+
+.contact__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.contact__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.contact__input {
+  width: 100%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.5rem 0.5rem 0;
+  resize: none;
+}
+
+.contact__form-group {
+  display: flex;
+}
+
+.contact__content {
+  background-color: var(--input-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
+
+  z-index: 9;
+  position: relative;
+}
+
+.contact-button {
+  cursor: pointer;
+  border: none;
+
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  font-family: var(--body-font);
+  &:hover {
+    svg {
+      transform: scale(1.1) rotate(0) translateX(10px);
+    }
+  }
+}
+
+.error-message,
+.success-message {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.error-message {
+  color: #d8000c;
+  background-color: #ffd2d2;
+}
+
+.success-message {
+  color: #4f8a10;
+  background-color: #dff2bf;
+}
+
+.email-content {
+  position: relative;
+}
+
+#not-mail {
+  opacity: 0;
+  color: #d8000c;
+  position: absolute;
+  left: 4px;
+  top: -25px;
+}
+
+.error::placeholder {
+  color: #ff4d4d;
+}
+
+@keyframes dongle {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  10% {
+    transform: translate(-10px, 0px);
+  }
+  20% {
+    transform: translate(10px, 0px);
+  }
+  30% {
+    transform: translate(-10px, 0px);
+  }
+  40% {
+    transform: translate(10px, 0px);
+  }
+  50% {
+    transform: translate(-10px, 0px);
+  }
+  60% {
+    transform: translate(10px, 0px);
+  }
+  70% {
+    transform: translate(-10px, 0px);
+  }
+  80% {
+    transform: translate(10px, 0px);
+  }
+  90% {
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contact__container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .contact__inputs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact__form {
+    width: 40%;
+  }
+}

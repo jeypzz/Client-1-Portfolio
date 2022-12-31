@@ -1,0 +1,20 @@
+.recent__work-container {
+  display: flex;
+  justify-content: center;
+
+  .repo__content:first-child {
+    margin-right: 3rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .recent__work-container {
+    flex-direction: column;
+    align-items: center;
+
+    .repo__content:first-child {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  }
+}

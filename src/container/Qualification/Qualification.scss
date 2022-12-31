@@ -1,0 +1,134 @@
+.qualification__container {
+  display: flex;
+  padding: 0 2rem 0 8rem;
+}
+
+.qualification__description {
+  padding: 0 1rem;
+}
+
+.skills__content {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 2rem;
+  max-height: 330px;
+}
+
+.skill__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1rem;
+  z-index: 9;
+  position: relative;
+
+  p {
+    font-size: var(--small-font-size);
+  }
+
+  .skill__logo {
+    img {
+      width: 28px;
+      height: 28px;
+    }
+    width: 122px;
+    background-color: var(--input-color);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+.qualification__content {
+  flex: 1;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+@media screen and (min-width: 2020px) {
+  .skill__item {
+    .skill__logo {
+      img {
+        width: 36px;
+        height: 36px;
+      }
+      padding: 1rem 1rem;
+      width: 170px;
+    }
+  }
+
+  .skills__content {
+    flex: 0.4;
+    max-height: none;
+  }
+
+  .qualification__content {
+    flex: 0.35;
+  }
+
+  .qualification__container {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 2019px) {
+  .skills__content {
+    margin-right: 3rem;
+    flex: 0.4;
+  }
+
+  .skill__item {
+    .skill__logo {
+      img {
+        width: 32px;
+        height: 32px;
+      }
+      width: 140px;
+    }
+  }
+
+  .qualification__content {
+    flex: 0.35;
+  }
+
+  .qualification__container {
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .qualification__container {
+    flex-direction: column;
+    padding: 0 2rem 0 2rem;
+  }
+
+  .skills__content {
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+    max-height: none;
+  }
+
+  .qualification__content {
+    margin-top: 2rem;
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .qualification__container {
+    flex-direction: column;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .qualification__content {
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+}

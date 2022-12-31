@@ -1,0 +1,102 @@
+.ProjectCard__container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  background-color: var(--container-color);
+  border-radius: 0.5rem;
+  max-width: 320px;
+  height: 460px;
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0;
+
+  .img__container {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100.05%);
+    position: relative;
+    height: 170px;
+    width: 100%;
+    background-color: hsl(var(--hue-color), 29%, 16%);
+    transition: 0.3s;
+  }
+
+  &:hover {
+    .figma-button,
+    .youtube-button {
+      opacity: 0.8;
+    }
+
+    img {
+      transform: scale(110%);
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+
+    .img__container {
+      height: 198px;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+    transition: 0.3s;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100.05%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 1px;
+  }
+}
+
+.ProjectCard__content {
+  padding: 1.5rem 2rem;
+
+  h4 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: var(--smaller-font-size);
+    height: 100px;
+
+    a {
+      color: var(--first-color);
+      text-decoration: underline;
+    }
+  }
+}
+
+.project__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0 2rem 1.5rem;
+}
+
+.project__btn {
+  width: 120px;
+  padding: 0.5rem 0.5rem;
+
+  svg {
+    transition: 0.4s;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(140%) rotate(360deg);
+    }
+  }
+}
+
+.figma-button,
+.youtube-button {
+  transition: 0.4s;
+  opacity: 0;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
